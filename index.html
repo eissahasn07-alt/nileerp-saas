@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>NileERP SaaS</title>
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<h1>🏪 NileERP SaaS AI</h1>
+
+<div class="card">
+<h2>🔐 تسجيل دخول</h2>
+<input id="email" placeholder="email">
+<input id="pass" type="password" placeholder="password">
+<button onclick="login()">دخول</button>
+<p id="auth"></p>
+</div>
+
+<div class="card">
+<h2>🏪 المنتجات</h2>
+<input id="name" placeholder="اسم المنتج">
+<input id="price" placeholder="السعر">
+<button onclick="addProduct()">إضافة</button>
+<ul id="list"></ul>
+</div>
+
+<div class="card">
+<h2>💰 الاشتراكات</h2>
+<button onclick="plan('basic')">Basic 50</button>
+<button onclick="plan('pro')">Pro 125</button>
+<button onclick="plan('business')">Business 1000</button>
+<p id="sub"></p>
+</div>
+
+<div class="card">
+<h2>🤖 NileAI</h2>
+<input id="ai" placeholder="اسأل AI">
+<button onclick="askAI()">إرسال</button>
+<p id="out"></p>
+</div>
+
+<script src="app.js"></script>
+</body>
+</html>
