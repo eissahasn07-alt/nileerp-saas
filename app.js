@@ -4,6 +4,18 @@ const SUPABASE_KEY = "sb_publishable_NmM72X34i1_BiqLt4BkoSw_-moypRoq";
 const supabase = supabase.createClient(SUPABASE_URL, SUPABASE_KEY);
 let products = [];
 let logged = false;
+async function addProduct(name, price){
+  await supabase
+    .from('products')
+    .insert([{ name, price }]);
+}
+async function getProducts(){
+  let { data } = await supabase
+    .from('products')
+    .select('*');
+
+  console.log(data);
+}
 
 function login(){
   let email = document.getElementById("email").value;
