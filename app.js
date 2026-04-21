@@ -1,3 +1,7 @@
+const SUPABASE_URL = "https://rpmucsrnsqchfyxfclmd.supabase.co";
+const SUPABASE_KEY = "sb_publishable_NmM72X34i1_BiqLt4BkoSw_-moypRoq";
+
+const supabase = supabase.createClient(SUPABASE_URL, SUPABASE_KEY);
 let products = [];
 let logged = false;
 
